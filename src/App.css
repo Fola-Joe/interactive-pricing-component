@@ -1,0 +1,13 @@
+/* .header {
+    background: url(./pattern-circles.svg) center top no-repeat;
+} */
+.h1 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+.header p {
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin-bottom: 4rem;
+}

@@ -50,4 +50,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  text-align: center;
+  /* background: url(./bg-pattern.svg) center top no-repeat ;
+  background-size: contain; */
 }
