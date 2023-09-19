@@ -1,13 +1,20 @@
 /* .header {
     background: url(./pattern-circles.svg) center top no-repeat;
 } */
+.app-main {
+    margin-top: 4rem;
+    width: 100%;
+    max-width: 360px;
+}
 .h1 {
     font-size: 1.2rem;
     font-weight: 800;
     margin-bottom: 1rem;
+    color: hsl(227, 35%, 25%);
 }
 .header p {
     font-size: 0.75rem;
     line-height: 1.5;
     margin-bottom: 4rem;
+    color: hsl(225, 20%, 60%);
 }

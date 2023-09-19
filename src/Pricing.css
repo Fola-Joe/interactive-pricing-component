@@ -1,14 +1,23 @@
+.main {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  max-width: 370px;
+  /* padding: 1rem; */
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 50px hsl(226, 100%, 87%);
+}
 .pricing-h1 {
   margin-bottom: 2rem;
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
 }
-
 .priceValue {
   font-weight: 800;
   font-size: 1.75rem;
+  color: hsl(227, 35%, 25%);
 }
-
 .pricing-h2 {
   display: flex;
   align-items: center;
@@ -99,9 +108,9 @@
 .btn {
   font-family: 'Manrope', sans-serif;
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   border: none;
-  color: hsl(225, 20%, 60%);
+  color: hsl(226, 100%, 87%);
   background-color: hsl(227, 35%, 25%);
   border-radius: 2rem;
   padding: 0.75rem 2.5rem;
@@ -111,4 +120,7 @@
 }
 .btn:hover {
   color: hsl(0, 0%, 100%);
+}
+.pricing-h1, .pricing-h2, .billing-section, .check-section {
+  color: hsl(225, 20%, 60%);
 }

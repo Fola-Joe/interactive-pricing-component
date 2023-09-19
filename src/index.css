@@ -51,6 +51,7 @@ body {
   align-items: center;
   min-height: 100vh;
   text-align: center;
-  /* background: url(./bg-pattern.svg) center top no-repeat ;
-  background-size: contain; */
+  background-color: hsl(230, 100%, 99%);
+  background: url(./bg-pattern.svg) center top no-repeat ; 
+  /* background-size: contain; */
 }
