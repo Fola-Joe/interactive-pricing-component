@@ -56,10 +56,23 @@ export default function Pricing() {
                 <ToggleSwitch />
                 <span className="yr-billing">Yearly Billing</span>
             </div>
-            <h3>Unlimited websites</h3>
-            <h3>100% data ownership</h3>
-            <h3>Email reports</h3>
-            <button>Start my trial</button>
+            <div>
+                <section>
+                    <section className="check-section">
+                        <img src="./icon-check.svg" alt="" />
+                        <h3>Unlimited websites</h3>
+                    </section>
+                    <section className="check-section">
+                        <img src="./icon-check.svg" alt="" />
+                        <h3>100% data ownership</h3>
+                    </section>
+                    <section className="check-section">
+                        <img src="./icon-check.svg" alt="" />
+                        <h3>Email reports</h3>
+                    </section>
+                </section>
+                <button className="btn">Start my trial</button>
+            </div>
         </section>
     );
 }

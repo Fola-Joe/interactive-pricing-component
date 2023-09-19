@@ -47,9 +47,9 @@
 }
 
 .toggle-input:checked+.slider-span:before {
-    -webkit-transform: translateX(0.9rem);
-    -ms-transform: translateX(0.9rem);
-    transform: translateX(0.9rem);
+    -webkit-transform: translateX(1rem);
+    -ms-transform: translateX(1rem);
+    transform: translateX(1rem);
 }
 
 /* Rounded sliders */

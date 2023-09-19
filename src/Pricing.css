@@ -1,13 +1,15 @@
 .pricing-h1 {
-    margin-bottom: 2rem;
-    font-size: 0.85rem;
-    letter-spacing: 0.1rem;
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
 }
+
 .priceValue {
-    font-weight: 800;
-    font-size: 1.75rem;
+  font-weight: 800;
+  font-size: 1.75rem;
 }
-.pricing-h2{
+
+.pricing-h2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,59 +17,98 @@
   margin-bottom: 2rem;
   font-size: 0.85rem;
 }
+
+
+/* Slider styles */
+
 .slide-container {
-    width: 100%; /* Width of the outside container */
-    margin-bottom: 2.5rem;
+  width: 100%;
+  /* Width of the outside container */
+  margin-bottom: 2.5rem;
 }
+
 .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
-    appearance: none;
-    width: 100%; /* Full-width */
-    border-radius: 2rem; 
-    height: 0.5rem; /* Specified height */
-    background: hsl(174, 77%, 80%);
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-    transition: opacity .2s;
-  }
-  
-  /* Mouse-over effects */
-  .slider:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-  }
-  
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) 
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Full-width */
+  border-radius: 2rem;
+  height: 0.5rem;
+  /* Specified height */
+  background: hsl(174, 77%, 80%);
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) 
   and -moz- (Firefox) to override default look) */
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    height: 2.25rem;
-    width: 2.25rem;
-    box-shadow: 0 10px 20px hsl(174, 86%, 45%);
-    border-radius: 50%;
-    border: 0;
-    background: hsl(174, 86%, 45%) url('./icon-slider.svg') center no-repeat;
-    cursor: pointer;
-  }
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2.25rem;
+  width: 2.25rem;
+  box-shadow: 0 10px 20px hsl(174, 86%, 45%);
+  border-radius: 50%;
+  border: 0;
+  background: hsl(174, 86%, 45%) url('./icon-slider.svg') center no-repeat;
+  cursor: pointer;
+}
 
-  .slider::-moz-range-thumb {
-    width: 23px;
-    height: 25px;
-    border: 0;
-    background: hsl(174, 86%, 45%) url('./icon-slider.svg') center no-repeat;
-    cursor: pointer;
-  }
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 25px;
+  border: 0;
+  background: hsl(174, 86%, 45%) url('./icon-slider.svg') center no-repeat;
+  cursor: pointer;
+}
 
-  .billing-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.75rem;
-    border-bottom: 1px solid hsl(223, 50%, 87%);
-    padding-bottom: 2rem;
-    margin-bottom: 1.5rem;
-  }
-  .mth-billing, .yr-billing {
-    font-size: 0.85rem;
-  }
+.billing-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid hsl(223, 50%, 87%);
+  padding-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+
+.mth-billing, .yr-billing {
+  font-size: 0.8rem;
+}
+.check-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
+.btn {
+  font-family: 'Manrope', sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: none;
+  color: hsl(225, 20%, 60%);
+  background-color: hsl(227, 35%, 25%);
+  border-radius: 2rem;
+  padding: 0.75rem 2.5rem;
+  font-size: 0.7rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.btn:hover {
+  color: hsl(0, 0%, 100%);
+}
