@@ -1,4 +1,5 @@
 import './Pricing.css';
+import ToggleSwitch from './toggleSwitch';
 import { useState } from 'react';
 
 //function to display views as 10k - 1M
@@ -30,14 +31,14 @@ export default function Pricing() {
             setPrice(16);
         } else if (newViews >= 50000) {
             setPrice(12);
-        }  else if (newViews >= 10000) {
+        } else if (newViews >= 10000) {
             setPrice(8);
         }
     };
 
     return (
         <section className="main">
-            <h1 className="pricing-h1">{formatLabel(views)} Pageviews</h1>
+            <h1 className="pricing-h1">{formatLabel(views)} PAGEVIEWS</h1>
             <div className="slide-container">
                 <input type="range"
                     min="10000"
@@ -49,8 +50,12 @@ export default function Pricing() {
                     onChange={updateValue} />
             </div>
 
-            <h2>${price}.00/month</h2>
-            <p><span className="span-1">Monthly Billing</span> <span className="span2">Yearly Billing</span></p>
+            <h2 className="pricing-h2"><span className="priceValue">${price}.00</span>/ month</h2>
+            <div className="billing-section">
+                <span className="mth-billing">Monthly Billing</span>
+                <ToggleSwitch />
+                <span className="yr-billing">Yearly Billing</span>
+            </div>
             <h3>Unlimited websites</h3>
             <h3>100% data ownership</h3>
             <h3>Email reports</h3>
