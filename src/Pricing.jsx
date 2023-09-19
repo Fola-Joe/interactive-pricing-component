@@ -1,6 +1,15 @@
 import './Pricing.css';
 import { useState } from 'react';
 
+//function to display views as 10k - 1M
+function formatLabel(views) {
+    if (views >= 1000000) {
+        return `${(views / 1000000)}M`
+    } else if (views >= 1000) {
+        return `${(views / 1000)}k`;
+    };
+    return views.toLocaleString();
+}
 
 export default function Pricing() {
 
@@ -8,24 +17,27 @@ export default function Pricing() {
     const [price, setPrice] = useState(8);
 
     const updateValue = (e) => {
-        const newViews = parseInt(e.target.value, 10); // Parse the input value to an integer
-        setViews(newViews); // Update the views state
-        if (newViews == 50000) {
-            setPrice(12);
-        } else if (newViews == 100000) {
-            setPrice(16);
-        } else if (newViews == 500000) {
-            setPrice(24);
-        } else if (newViews == 1000000) {
+        // Parse the input value to an integer
+        const newViews = parseInt(e.target.value);
+        // Update the views state
+        setViews(newViews);
+
+        if (newViews == 1000000) {
             setPrice(36);
-        } else if (newViews == 10000) {
+        } else if (newViews >= 500000) {
+            setPrice(24);
+        } else if (newViews >= 100000) {
+            setPrice(16);
+        } else if (newViews >= 50000) {
+            setPrice(12);
+        }  else if (newViews >= 10000) {
             setPrice(8);
         }
     };
 
     return (
         <section className="main">
-            <h1 className="pricing-h1">{views.toLocaleString()} Pageviews</h1>
+            <h1 className="pricing-h1">{formatLabel(views)} Pageviews</h1>
             <div className="slide-container">
                 <input type="range"
                     min="10000"
