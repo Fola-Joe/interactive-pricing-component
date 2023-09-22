@@ -52,12 +52,16 @@ export default function Pricing() {
 
             <h2 className="pricing-h2"><span className="priceValue">${price}.00</span>/ month</h2>
             <div className="billing-section">
-                <span className="mth-billing">Monthly Billing</span>
+                <p className="mth-billing">Monthly Billing</p>
                 <ToggleSwitch />
-                <span className="yr-billing">Yearly Billing</span>
+                <div className="discount">
+                    <span className="yr-billing">Yearly Billing</span>
+                    <span className="percentage percent-short">-25%</span>
+                    <span className="percentage percent-long">-25% discount</span>
+                </div>
             </div>
             <div>
-                <section>
+                <section className="bottom-section">
                     <section className="check-section">
                         <img src="./icon-check.svg" alt="" />
                         <h3>Unlimited websites</h3>

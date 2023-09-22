@@ -2,7 +2,6 @@
   background-color: hsl(0, 0%, 100%);
   width: 100%;
   max-width: 330px;
-  /* padding: 1rem; */
   padding-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 0.5rem;
@@ -31,8 +30,9 @@
 /* Slider styles */
 
 .slide-container {
-  width: 100%;
+  width: 90%;
   /* Width of the outside container */
+  margin: auto;
   margin-bottom: 2.5rem;
 }
 
@@ -85,17 +85,31 @@
 
 .billing-section {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   gap: 0.75rem;
-  border-bottom: 1px solid hsl(223, 50%, 87%);
-  padding-bottom: 2rem;
-  margin-bottom: 1.5rem;
+  margin-right: 1.25rem;
+  margin-bottom: 2rem;
 }
-
-
 .mth-billing, .yr-billing {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+}
+.discount {
+  display: flex;
+  align-items: center;
+}
+.percentage {
+  margin-left: 0.5rem;
+  background-color: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+  padding: 0.2rem 0.4rem;
+  border-radius: 2rem;
+  font-size: 0.6rem;
+}
+.percent-long {display: none;}
+.bottom-section {
+  padding-top: 2rem;
+  border-top: 1px solid hsl(223, 50%, 87%);
 }
 .check-section {
   display: flex;
