@@ -46,9 +46,6 @@ table {
 html {box-sizing: border-box;}
 body {
   font-family: 'Manrope', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   text-align: center;
   background-color: hsl(230, 100%, 99%);

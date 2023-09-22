@@ -2,9 +2,12 @@
     background: url(./pattern-circles.svg) center top no-repeat;
 } */
 .app-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 4rem;
     width: 100%;
-    max-width: 360px;
 }
 .h1 {
     font-size: 1.2rem;
