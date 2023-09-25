@@ -7,7 +7,7 @@
     width: 100%;
 }
 .header {
-    background: url(pattern-circles.svg) center top no-repeat;
+    background: url(./assets/pattern-circles.svg) center top no-repeat;
     padding: 3rem 0 2rem;
 }
 .h1 {

@@ -48,7 +48,7 @@ body {
   font-family: 'Manrope', sans-serif;
   min-height: 100vh;
   text-align: center;
-  background: hsl(230, 100%, 99%) url(bg-pattern.svg) center top no-repeat ; 
+  background: hsl(230, 100%, 99%) url(./assets/bg-pattern.svg) center top no-repeat ; 
   background-size: contain;
 }
 
