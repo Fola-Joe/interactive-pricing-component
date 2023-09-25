@@ -12,11 +12,13 @@
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
 }
+.main-display .pricing-h2 {display: none;}
 .priceValue {
   font-weight: 800;
   font-size: 1.75rem;
   color: hsl(227, 35%, 25%);
 }
+
 .pricing-h2 {
   display: flex;
   align-items: center;
@@ -82,7 +84,6 @@
   background: hsl(174, 86%, 45%) url('./icon-slider.svg') center no-repeat;
   cursor: pointer;
 }
-
 .billing-section {
   display: flex;
   justify-content: flex-end;
@@ -91,7 +92,9 @@
   margin-right: 1.25rem;
   margin-bottom: 2rem;
 }
-.mth-billing, .yr-billing {
+
+.mth-billing,
+.yr-billing {
   font-size: 0.75rem;
 }
 .discount {
@@ -106,7 +109,10 @@
   border-radius: 2rem;
   font-size: 0.6rem;
 }
-.percent-long {display: none;}
+
+.percent-long {
+  display: none;
+}
 .bottom-section {
   padding-top: 2rem;
   border-top: 1px solid hsl(223, 50%, 87%);
@@ -135,6 +141,59 @@
 .btn:hover {
   color: hsl(0, 0%, 100%);
 }
-.pricing-h1, .pricing-h2, .billing-section, .check-section {
+.pricing-h1,
+.pricing-h2,
+.billing-section,
+.check-section {
   color: hsl(225, 20%, 60%);
+}
+
+@media screen and (min-width: 820px) {
+  .main {
+    max-width: 550px;
+    padding: 4rem 0 1.5rem;
+  }
+  .main .pricing-h2 {display: none;}
+  .main-display .pricing-h2 {
+    display: block;
+    font-size: 1.1rem;
+  }
+  .main-display .pricing-h1 {font-size: 1rem;}
+  .main-display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 2.75rem;
+    margin-right: 2.75rem;
+    margin-bottom: 1rem;
+  }
+  .priceValue {font-size: 2.5rem;}
+  .slide-container {width: 85%;}
+  .billing-section {margin-right: 4.25rem;}
+  .mth-billing, .yr-billing {
+    font-size: 0.9rem;
+  }
+  .percent-long {
+    display: inline;
+  }
+  .percent-short {display: none;}
+
+  .bottom-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: none;
+    padding-top: 0;
+  }
+  .btn {margin: 0;}
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2.75rem;
+    padding-right: 2.75rem;
+    padding-top: 2rem;
+    border-top: 1px solid hsl(223, 50%, 87%);
+  }
 }

@@ -60,3 +60,20 @@
 .slider-span.round:before {
     border-radius: 50%;
 }
+
+@media screen and (min-width: 820px) {
+    .switch {
+        width: 2.5rem;
+        height: 1.3rem;
+    }
+    .slider-span:before {
+        width: 0.85rem;
+        height: 0.85rem;
+        bottom: 0.21rem;
+    }
+    .toggle-input:checked+.slider-span:before {
+        -webkit-transform: translateX(1.2rem);
+        -ms-transform: translateX(1.2rem);
+        transform: translateX(1.2rem);
+    }
+}

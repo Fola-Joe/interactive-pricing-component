@@ -48,7 +48,13 @@ body {
   font-family: 'Manrope', sans-serif;
   min-height: 100vh;
   text-align: center;
-  background-color: hsl(230, 100%, 99%);
-  background: url(./bg-pattern.svg) center top no-repeat ; 
-  /* background-size: contain; */
+  background: hsl(230, 100%, 99%) url(./bg-pattern.svg) center top no-repeat ; 
+  background-size: contain;
+}
+
+@media screen and (max-width: 1200px) {
+	body {
+		background-size: auto;
+		background-position: left top;
+	}
 }

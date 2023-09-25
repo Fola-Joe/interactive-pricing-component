@@ -1,13 +1,14 @@
-/* .header {
-    background: url(./pattern-circles.svg) center top no-repeat;
-} */
 .app-main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 2.5rem;
     width: 100%;
+}
+.header {
+    background: url(./pattern-circles.svg) center top no-repeat;
+    padding: 3rem 0 2rem;
 }
 .h1 {
     font-size: 1.2rem;
@@ -20,4 +21,10 @@
     line-height: 1.5;
     margin-bottom: 4rem;
     color: hsl(225, 20%, 60%);
+}
+
+@media screen and (min-width: 820px) {
+    br {display: none;}
+    .h1 {font-size: 1.9rem;}
+    .header p {font-size: 1rem;}
 }
