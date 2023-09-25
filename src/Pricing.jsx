@@ -1,6 +1,6 @@
 import './Pricing.css';
 import ToggleSwitch from './toggleSwitch';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 //function to display views as 10k - 1M
 function formatLabel(views) {
@@ -23,38 +23,43 @@ export default function Pricing() {
         const newViews = parseInt(e.target.value);
         // Update the views state
         setViews(newViews);
-        // updatePrice(newViews);
+    }
 
+
+    // To watch for changes in the isDiscounted state
+    // and then calculate and set the discounted price
+    useEffect(() => {
         let newPrice = 8;
-        if (newViews == 1000000) {
-            // setPrice(36);
-            newPrice = 36;
-        } else if (newViews >= 500000) {
-            // setPrice(24);
-            newPrice = 24;
-        } else if (newViews >= 100000) {
-            // setPrice(16);
-            newPrice = 16;
-        } else if (newViews >= 50000) {
-            // setPrice(12);
-            newPrice = 12;
-        } else if (newViews >= 10000) {
-            // setPrice(8);
-            newPrice = 8;
+        if (views === 1000000) {
+          newPrice = 36;
+        } else if (views >= 500000) {
+          newPrice = 24;
+        } else if (views >= 100000) {
+          newPrice = 16;
+        } else if (views >= 50000) {
+          newPrice = 12;
+        } else if (views >= 10000) {
+          newPrice = 8;
         }
-
-        // Apply the discount if the toggle switch is flipped
+    
         if (isDiscounted) {
-            newPrice *= 0.75;
+          newPrice = newPrice * 0.75;
         }
+    
         setPrice(newPrice);
-    };
+      }, [views, isDiscounted]);
+
+
+      // function to toggle prices
+      const toggleDiscount = () => {
+        setIsDiscounted(!isDiscounted);
+      };
 
     return (
         <section className="main">
             <div className="main-display">
                 <h1 className="pricing-h1">{formatLabel(views)} PAGEVIEWS</h1>
-                <h2 className="pricing-h2"><span className="priceValue">${isDiscounted ? (price * 0.75) : price}.00</span>/ month</h2>
+                <h2 className="pricing-h2"><span className="priceValue">${price}.00</span>/ month</h2>
             </div>
             <div className="slide-container">
                 <input type="range"
@@ -67,10 +72,10 @@ export default function Pricing() {
                     onChange={updateValue} />
             </div>
 
-            <h2 className="pricing-h2"><span className="priceValue">${isDiscounted ? (price * 0.75) : price}.00</span>/ month</h2>
+            <h2 className="pricing-h2"><span className="priceValue">${price}.00</span>/ month</h2>
             <div className="billing-section">
                 <p className="mth-billing">Monthly Billing</p>
-                <ToggleSwitch onChange={() => setIsDiscounted(isDiscounted)} />
+                <ToggleSwitch onChange={toggleDiscount} />
                 <div className="discount">
                     <span className="yr-billing">Yearly Billing</span>
                     <span className="percentage percent-short">-25%</span>
