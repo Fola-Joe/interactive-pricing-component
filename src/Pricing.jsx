@@ -1,5 +1,5 @@
 import './Pricing.css';
-import ToggleSwitch from './toggleSwitch';
+import ToggleSwitch from './ToggleSwitch';
 import { useState, useEffect } from 'react';
 
 //function to display views as 10k - 1M
