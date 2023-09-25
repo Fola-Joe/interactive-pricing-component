@@ -34,7 +34,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
+- [React](https://react.dev/) - JS library
 
 ## Author
 
