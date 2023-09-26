@@ -82,7 +82,7 @@ export default function Pricing() {
                     <span className="percentage percent-long">-25% discount</span>
                 </div>
             </div>
-            <div className="footer">
+            <footer className="footer">
                 <section className="bottom-section">
                     <section className="check-section">
                         <img src="./icon-check.svg" alt="" />
@@ -98,7 +98,7 @@ export default function Pricing() {
                     </section>
                 </section>
                 <button className="btn">Start my trial</button>
-            </div>
+            </footer>
         </section>
     );
 }
